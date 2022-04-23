@@ -38,15 +38,27 @@
     margin-right: auto;
      font-family: 'Cormorant', serif;       
 }
-.about p{
+form {
+    
+    font-size:30px;
+    text-align:center;
+    height:40px;
+    padding:40px;
+    
+
+}
+#myPar {
+    text-align:center;
+}
+.about p {
     text-align: center;
-    width:65%;
-    font-size:22px;
+    width: 65%;
+    font-size: 22px;
     margin-left: auto;
     margin-right: auto;
-     margin-bottom: 70px;
+    margin-bottom: 70px;
 }  
-    #divh {
+    #divh1 {
         font-family: 'Gilda Display', serif;
         font-size: 16px;
         text-align: right;
