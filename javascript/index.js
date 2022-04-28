@@ -1,12 +1,10 @@
 var form = document.querySelector('form')
 
-var names = document.getElementById("fname")
-var lnames = document.getElementById("lname")
-var emails = document.getElementById("email")
+var names = document.getElementById("txtName")
+var lnames = document.getElementById("txtEmail")
+var phone = document.getElementById("txtPhone")
+var emails = document.getElementById("txtMessage")
 
-
-
-let phones = document.querySelector('#phone');
 
 
 
@@ -15,6 +13,7 @@ form.onsubmit = function (e) {
 
     document.cookie = names.value
     document.cookie = lnames.value
+    document.cookie = phone.value
     document.cookie = emails.value
 
 
@@ -27,21 +26,11 @@ form.onsubmit = function (e) {
 
 
 
-    names.textContent
-    console.log(names.value)
-
-    lnames.textContent
-    console.log(lnames.value)
-
-    emails.textContent
-    console.log(emails.value)
-
-
-    console.log(phones.value)
 
     var parElement = document.getElementById("myPar");
     var textToAdd = document.createTextNode("Thank you " + names.value + " " + lnames.value + " we will contact your email shortly");
     parElement.appendChild(textToAdd);
+    localStorage.clear()
 
 
 }

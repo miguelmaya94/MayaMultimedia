@@ -1,3 +1,24 @@
+<?php
+// database connection code
+// $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
+
+$con = mysqli_connect('localhost', 'mayamultimediaDB', 'ledzeppelin','mayamultimediaDB');
+
+// get the post records
+$txtName = $_POST['txtName'];
+$txtEmail = $_POST['txtEmail'];
+$txtPhone = $_POST['txtPhone'];
+$txtMessage = $_POST['txtMessage'];
+
+// database insert SQL code
+$sql = "INSERT INTO `tbl_contact` (`Id`, `fldName`, `fldEmail`, `fldPhone`, `fldMessage`) VALUES ('0', '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
+
+ 
+
+?>
+
+
+
 
 
 
@@ -33,33 +54,19 @@
     </nav>
     <br>
     <p id="myPar"></p>
-    <br>
-    <div id="forms">
-        <form class="form" action="contactform.php" method="POST">
-            <label for="Name">Name </label>
-            <input type="text" name="txtName" id="txtName">
-            </p>
-            <p>
-                <label for="email">Email</label>
-                <input type="text" name="txtEmail" id="txtEmail">
-            </p>
-            <p>
-                <label for="phone">Phone</label>
-                <input type="text" name="txtPhone" id="txtPhone">
-            </p>
-            <p>
-                <label for="message">Message</label>
-<textarea name="txtMessage" id="txtMessage"></textarea>
-            </p>
-            
-            <p>
-                <input type="submit" name="Submit" id="Submit" value="Submit">
-            </p>
-        </form>
+ 
     </div>
+   <?php
+   // insert in database 
+$rs = mysqli_query($con, $sql);
 
+if($rs)
+{
+	echo "Contact Records Inserted";
+}
+?>
 
-   <script src="javascript/index.js"></script>
+    <!--<script src="javascript/index.js"></script>-->
     <footer>
         <div id="div5">
             Maya Multimedia LLC All Copyrights Reserved 2020-22 \ Graphic Design Scientist and Software Engineer \ Miguel.maya88@csu.fullerton.edu
