@@ -1,20 +1,17 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<title>Maya Multimedia</title>
+
 <head>
+    <title>Maya Multimedia</title>
     <link rel="stylesheet" href="css/stylesabout.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+          href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Gilda+Display" rel="stylesheet">
+          href="https://fonts.googleapis.com/css?family=Gilda+Display">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
+          href="https://fonts.googleapis.com/css?family=Cormorant">
 </head>
 <body>
     <nav>
@@ -24,6 +21,7 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="https://www.mayandmiguel.com/">Maya</a>
+            <a href="login.php">Login</a>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -32,11 +30,17 @@
         </div>
     </nav>
     <br>
-    <p id="myPar"></p>
+    <div id="container">
+        <p>Please, fill out our form and a representative will be in contact shortly</p>
+        <p id="myPar"></p>
+    </div>
     <br>
     <div id="forms">
-        <form class="form" action="contactform.php" method="POST">
-            <label for="Name">Name </label>
+
+        <form class="formss" action="contactform.php" method="POST">
+          
+            <p>
+                <label for="Name">Name</label>
             <input type="text" name="txtName" id="txtName">
             </p>
             <p>
@@ -49,7 +53,7 @@
             </p>
             <p>
                 <label for="message">Message</label>
-<textarea name="txtMessage" id="txtMessage"></textarea>
+                <textarea name="txtMessage" id="txtMessage"></textarea>
             </p>
             
             <p>

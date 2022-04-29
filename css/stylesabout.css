@@ -44,11 +44,18 @@ form {
     text-align:center;
     height:40px;
     padding:40px;
+    margin-bottom:400px;
     
 
 }
 #myPar {
     text-align:center;
+}
+#container  {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:2rem;
 }
 .about p {
     text-align: center;

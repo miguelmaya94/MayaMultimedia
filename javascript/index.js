@@ -1,39 +1,27 @@
-var form = document.querySelector('form')
+var forms = document.querySelector('formss')
 
 var names = document.getElementById("txtName")
-var lnames = document.getElementById("txtEmail")
+var email = document.getElementById("txtEmail")
 var phone = document.getElementById("txtPhone")
-var emails = document.getElementById("txtMessage")
+var mssg = document.getElementById("txtMessage")
 
 
 
 
-form.onsubmit = function (e) {
-    e.preventDefault()
-
-    document.cookie = names.value
-    document.cookie = lnames.value
-    document.cookie = phone.value
-    document.cookie = emails.value
-
-
-    names.textContent = names.value + " "
-    localStorage.setItem('first', names.value)
-
-    lnames.textContent = lnames.value + " "
-    localStorage.setItem('second', lnames.value)
+//forms.onsubmit = function (e) {
+  //  e.preventDefault()
+//document.cookie = names.value
+  //  document.cookie = email.value
+  //  document.cookie = phone.value
+  //      document.cookie = mssg.value
+ //   names.textContent = names.value + " "
+ //   localStorage.setItem('first', names.value)
+// email.textContent = email.value + " "
+  //  localStorage.setItem('second', email.value)
+  //  localStorage.clear()
+//}
 
 
-
-
-
-    var parElement = document.getElementById("myPar");
-    var textToAdd = document.createTextNode("Thank you " + names.value + " " + lnames.value + " we will contact your email shortly");
-    parElement.appendChild(textToAdd);
-    localStorage.clear()
-
-
-}
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {

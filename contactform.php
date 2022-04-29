@@ -66,7 +66,7 @@ if($rs)
 }
 ?>
 
-    <!--<script src="javascript/index.js"></script>-->
+    <script src="javascript/index.js"></script>
     <footer>
         <div id="div5">
             Maya Multimedia LLC All Copyrights Reserved 2020-22 \ Graphic Design Scientist and Software Engineer \ Miguel.maya88@csu.fullerton.edu

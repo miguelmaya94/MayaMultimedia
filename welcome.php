@@ -1,4 +1,13 @@
+<?php
+// Initialize the session
+session_start();
 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
        
@@ -39,12 +48,17 @@
                    <div id="divh1">Maya Multimedia</div>
                </div>
                </nav>
-           <div id="div3" class="animated fadeIn">Maya Multimedia LLC</div>
-           <img src="images/B_cards.jpg" alt="B" class="M" />
-           <div id="logo"> Art | Science |  Design | Software </div>
-           <script src="javascript/index.js"></script>
 
-           <footer>
+<div class="wrapper">
+  <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b><br> Welcome to your site.</h1>
+     <p>
+         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+     </p>
+   </div>
+  <script src="javascript/index.js"></script>
+
+ <footer>
                <div id="div5">
                    Maya Multimedia LLC All Copyrights Reserved 2020-22 \ Graphic Design Scientist and Software Engineer \ Miguel.maya88@csu.fullerton.edu
                </div>
